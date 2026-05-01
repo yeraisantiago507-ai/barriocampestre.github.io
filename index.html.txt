@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BARRIO CAMPESTRE | Restaurante Campestre - Lebrija, Santander</title>
+  <link rel="icon" type="image/png" href="logo-barrio-campestre.png">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#fffaf5; color:#333; }
+    header { background:#1a1a1a; color:#FFD700; padding:15px 20px; text-align:center; }
+    .logo-header { display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap; }
+    .logo-header img { width:70px; height:70px; border-radius:50%; }
+    .logo-header h1 { margin:0; font-size:2rem; letter-spacing:1px; }
+    .hero { background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto-local.jpg') center/cover; color:white; text-align:center; padding:120px 20px; }
+    .hero h2 { font-size:2.8rem; text-shadow:3px 3px 6px #000; margin-bottom:10px; }
+    .hero p { font-size:1.2rem; text-shadow:2px 2px 4px #000; }
+    .boton { background:#25D366; color:white; padding:15px 30px; border-radius:30px; text-decoration:none; font-weight:bold; display:inline-block; margin:10px; }
+    .boton-maps { background:#4285F4; }
+    .boton-insta { background:#E4405F; }
+    .seccion { padding:40px 20px; max-width:1100px; margin:auto; }
+    .menu-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:25px; }
+    .categoria { background:white; padding:20px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    .categoria h3 { color:#B22222; border-bottom:2px solid #FFD700; padding-bottom:10px; margin-top:12px; }
+    .categoria img { width:100%; height:240px; object-fit:cover; border-radius:8px; }
+    .destacado { grid-column:1/-1; background:#1a1a1a; color:white; }
+    .destacado h3 { color:#FFD700; border-bottom:2px solid #FFD700; }
+    .lista-menu { text-align:left; margin-top:15px; }
+    .item-menu { display:flex; justify-content:space-between; margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed #ddd; }
+    .item-menu-nombre { font-weight:bold; }
+    .item-menu-desc { font-size:0.85rem; color:#666; margin:3px 0; }
+    .item-menu-precio { color:#B22222; font-weight:bold; white-space:nowrap; margin-left:10px; }
+    .tabla-licores { width:100%; border-collapse:collapse; margin-top:15px; font-size:0.85rem; }
+    .tabla-licores th { background:#1a1a1a; color:#FFD700; padding:10px 5px; text-align:left; font-size:0.8rem; }
+    .tabla-licores td { padding:8px 5px; border-bottom:1px solid #eee; }
+    .subcategoria { font-weight:bold; color:#B22222; margin:15px 0 8px 0; font-size:0.95rem; }
+    .tag { background:#FFD700; color:#1a1a1a; font-size:0.7rem; padding:3px 8px; border-radius:10px; margin-left:8px; }
+    .tag-nuevo { background:#25D366; color:white; }
+    .tag-fin-semana { background:#FF6B6B; color:white; }
+    .tag-chef { background:#9C27B0; color:white; }
+    .tag-sin-alcohol { background:#42A5F5; color:white; }
+    .tag-premium { background:#FF9800; color:white; }
+    .tag-infantil { background:#FF4081; color:white; }
+    .tag-pollo { background:#FFA726; color:white; }
+    .aviso-chicheria { background:#FFF3CD; border:2px solid #FFD700; padding:12px; border-radius:8px; margin:15px 0; text-align:center; font-weight:bold; color:#856404; }
+    .aviso-legal { font-size:0.7rem; color:#999; text-align:center; margin-top:15px; line-height:1.4; }
+    .horario-box { background:#F5F5F5; padding:20px; border-radius:10px; margin:20px 0; }
+    .horario-item { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #ddd; }
+    .horario-item:last-child { border-bottom:none; }
+    .mapa { width:100%; height:350px; border:0; border-radius:10px; margin-top:20px; }
+    footer { background:#1a1a1a; color:white; text-align:center; padding:25px 20px; margin-top:40px; }
+    .footer-logo { width:60px; height:60px; border-radius:50%; margin-bottom:10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-header">
+      <img src="logo-barrio-campestre.png" alt="Logo BARRIO CAMPESTRE">
+      <div>
+        <h1>BARRIO CAMPESTRE</h1>
+        <p style="margin:5px 0 0 0;">Parrillas al carbón desde 2021 | Junto al peaje, Don Ruben, Lebrija</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>De la brasa a tu mesa</h2>
+    <p>Cortes premium, mariscos, pizzas artesanales y la mejor barra</p>
+    <a href="https://wa.me/573245406249?text=Hola, quiero hacer un pedido en BARRIO CAMPESTRE" class="boton">Pide por WhatsApp</a>
+    <a href="https://maps.app.goo.gl/QENJphaQFUz1HvHE9" target="_blank" class="boton boton-maps">Cómo llegar</a>
+  </section>
+
+  <section class="seccion">
+    <h2>Nuestro Menú</h2>
+    <div class="menu-grid">
+      <div class="categoria destacado">
+        <img src="picada-campestre.jpg" alt="Picada Campestre BARRIO CAMPESTRE">
+        <h3>🔥 PICADA CAMPESTRE - La de la casa</h3>
+        <p>Chicharrón, chorizo, morcilla, pollo, mazorca asada, papa criolla, arepa, guacamole, chimichurri. Para 3-4 personas.</p>
+      </div>
+      
+      <div class="categoria">
+        <h3>🍗 POLLERÍA - POLLO ASADO AL BARRIL <span class="tag tag-pollo">Al Carbón</span></h3>
+        <p style="font-size:0.85rem; color:#666; margin:10px 0;">Nuestros pollos son marinados y preparados al barril con puro sabor a carbón</p>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Pollo Entero</div>
+              <div class="item-menu-desc">Elige entre: Provenzal, Finas Hierbas o Pimienta</div>
+            </div>
+            <div class="item-menu-precio">$50K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Medio Pollo</div>
+              <div class="item-menu-desc">Elige entre: Provenzal, Finas Hierbas o Pimienta</div>
+            </div>
+            <div class="item-menu-precio">$25K</div>
+          </div>
+        </div>
+        <p style="font-size:0.85rem; color:#B22222; margin:15px 0 5px 0; font-weight:bold;">Acompaña tu pollo con la guarnición de tu gusto y la salsa que prefieras:</p>
+        <div class="subcategoria">ACOMPAÑANTES:</div>
+        <p style="font-size:0.85rem; color:#666; margin:5px 0 10px 15px;">• Papa en cascos<br>• Papas a la francesa<br>• Ensalada</p>
+        <div class="subcategoria">SALSAS:</div>
+        <p style="font-size:0.85rem; color:#666; margin:5px 0 10px 15px;">• Ají criollo<br>• Ají amarillo<br>• Huancayna<br>• Mayonesa Sriracha Badia</p>
+      </div>
+
+      <div class="categoria">
+        <img src="chicharron.jpg" alt="Carnes BARRIO CAMPESTRE">
+        <h3>🥩 DE LAS BRASAS</h3>
+        <p style="font-size:0.85rem; color:#666; margin:10px 0;">Todos los platos van acompañados de papa a la francesa</p>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Baby Beef</div>
+              <div class="item-menu-desc">300 gr. de lomo fino asado a la parrilla, con aderezo de la casa</div>
+            </div>
+            <div class="item-menu-precio">$40K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Filet Mignon</div>
+              <div class="item-menu-desc">350 gr. de lomo fino en medallones, bordeados con tocineta, napados en salsa de champiñones</div>
+            </div>
+            <div class="item-menu-precio">$44K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Pechuga Champion</div>
+              <div class="item-menu-desc">350 gr. de pechuga a la parrilla con salsa de champiñones</div>
+            </div>
+            <div class="item-menu-precio">$33K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Steak Pimienta</div>
+              <div class="item-menu-desc">300 gr. de lomo fino en medallones bañados en salsa steak pimienta</div>
+            </div>
+            <div class="item-menu-precio">$42K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Patacón del Barrio</div>
+              <div class="item-menu-desc">Trozos de lomo fino en salsa de la casa, pollo en tártara, queso crema, mozzarella y parmesano. NO lleva papa</div>
+            </div>
+            <div class="item-menu-precio">$25K</div>
+          </div>
+        </div>
+
+        <div class="subcategoria">CORTES ANGUS</div>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Entrañita <span class="tag tag-premium">Premium</span></div>
+              <div class="item-menu-desc">300 gr. con aderezo de la casa y papa a la francesa</div>
+            </div>
+            <div class="item-menu-precio">$65K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">New York Steak <span class="tag">Recomendado</span></div>
+              <div class="item-menu-desc">300 gr. con aderezo de la casa y papa francesa</div>
+            </div>
+            <div class="item-menu-precio">$65K</div>
+          </div>
+          <div class="item-menu"><div class="item-menu-nombre">Picanha 400gr</div><div class="item-menu-precio">$99.900</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">T-Bone Steak <span class="tag tag-nuevo">Nuevo</span></div><div class="item-menu-precio">$300.000</div></div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <img src="cazuela-mariscos.jpg" alt="Marisquería BARRIO CAMPESTRE">
+        <h3>🐙 MARISQUERÍA - CEVICHES & COCTELES</h3>
+        
+        <div class="subcategoria">CEVICHES - Estilo Peruano</div>
+        <p style="font-size:0.85rem; color:#666; margin:5px 0 10px 0;">Clásicos ceviches al estilo Peruano</p>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ceviche de Corvina</div>
+              <div class="item-menu-desc">Dados de filete de corvina, marinados en limón, leche de tigre, cebolla, ají amarillo y cilantro, acompañado de maíz crocante y chips de plátano</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ceviche de Camarones</div>
+              <div class="item-menu-desc">Camarones cocidos, marinados en limón, leche de tigre, cebolla, ají amarillo y cilantro, acompañado de maíz crocante y chips de plátano</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ceviche Mixto</div>
+              <div class="item-menu-desc">Mix de mariscos cocidos (camarón, calamar, almejas, pulpo, palmitos), marinados en limón, leche de tigre, cebolla, ají amarillo y cilantro, acompañado de maíz crocante y chips de plátano</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+        </div>
+
+        <div class="subcategoria">COCTELES DE MAR</div>
+        <p style="font-size:0.85rem; color:#666; margin:5px 0 10px 0;">Nuestros cocteles son elaborados con salsa de la casa</p>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Coctel de Camarones</div>
+              <div class="item-menu-desc">Camarones cocidos, salsa roja de la casa, cebolla, ají amarillo y cilantro, acompañado de maíz crocante y chips de plátano</div>
+            </div>
+            <div class="item-menu-precio">$25K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Coctel Mixto</div>
+              <div class="item-menu-desc">Mix de mariscos cocidos (camarón, calamar, almejas, pulpo, palmitos), salsa rosada de la casa, cebolla, ají amarillo y cilantro, acompañado de maíz crocante y chips de plátano</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Aguacate Relleno</div>
+              <div class="item-menu-desc">Medio aguacate relleno de mix de mariscos cocidos (camarón, calamar, almejas, pulpo, palmitos), salsa rosada de la casa, cebolla, ají amarillo y cilantro, acompañado de chips de plátano</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Canasta de Patacón</div>
+              <div class="item-menu-desc">Canastas de patacón rellenas de camarones cocidos, salsa roja de la casa, cebolla, ají amarillo y cilantro</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+        </div>
+
+        <div class="subcategoria">ESPECIALES DEL MAR</div>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Leche de Tigre de Ají Amarillo</div>
+              <div class="item-menu-desc">Copa con mix de mariscos apanados</div>
+            </div>
+            <div class="item-menu-precio">$26K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Leche de Tigre de Coco</div>
+              <div class="item-menu-desc">Copa con mix de mariscos apanados</div>
+            </div>
+            <div class="item-menu-precio">$26K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Paella Valenciana <span class="tag tag-fin-semana">Sáb y Dom</span></div>
+              <div class="item-menu-desc">Arroz con pulpo, calamares, mejillones, almejas, gambas, camarones y corvina</div>
+            </div>
+            <div class="item-menu-precio">$40K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Cazuela de Mariscos <span class="tag tag-fin-semana">Sáb y Dom</span></div>
+              <div class="item-menu-desc">Bisque de camarones y pulpo, calamar, almejas, mejillones y gambas. Con arroz de coco y patacones</div>
+            </div>
+            <div class="item-menu-precio">$35K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Pulpo a la Parrilla</div>
+              <div class="item-menu-desc">Sobre papa risada salteada, aromatizado con salsa provenzal</div>
+            </div>
+            <div class="item-menu-precio">$82.900</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Delicias de los 7 Mares <span class="tag">Recomendado</span></div>
+              <div class="item-menu-desc">Trilogía de ceviches: Peruano, Mixto y Coctel de camarón</div>
+            </div>
+            <div class="item-menu-precio">$140.000</div>
+          </div>
+          <div class="item-menu" style="background:#F3E5F5; padding:10px; border-radius:8px; border:2px solid #9C27B0;">
+            <div>
+              <div class="item-menu-nombre">RECOMENDADO DEL CHEF <span class="tag tag-chef">Sáb y Dom</span></div>
+              <div class="item-menu-desc">Plato especial del fin de semana. Pregunta por el del día</div>
+            </div>
+            <div class="item-menu-precio">$40K</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <img src="piqueteadero1.jpg" alt="Piqueteadero BARRIO CAMPESTRE">
+        <h3>🧀 PIQUETEADERO - PARA PICAR</h3>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Mazorca Cotizada <span class="tag">Recomendado</span></div>
+              <div class="item-menu-desc">Bogotana asada, tártara, queso costeño y tocineta</div>
+            </div>
+            <div class="item-menu-precio">$14K</div>
+          </div>
+          <div class="item-menu"><div class="item-menu-nombre">Mazorca Desgranada Cotizada</div><div class="item-menu-precio">$18K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Arepa de Choclo</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Maduro Relleno</div><div class="item-menu-precio">$12K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Empanadas del Barrio x3</div><div class="item-menu-precio">$8K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Alitas de Pollo x6</div><div class="item-menu-precio">$24K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Chicharrón al Barril 200gr</div><div class="item-menu-precio">$20K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Chorizo Argentino</div><div class="item-menu-precio">$10K</div></div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <img src="hamburguesa-barrio.jpg" alt="Hamburguesas BARRIO CAMPESTRE">
+        <h3>🍔 HAMBURGUESAS - CARNE ANGUS A LA PARRILLA</h3>
+        <p style="font-size:0.85rem; color:#666; margin:10px 0;">180 gr. de carne Angus, pan artesanal, queso mozzarella, queso cheddar, lechuga, tomate, papitas y salsas</p>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Barrio Campestre <span class="tag">De la casa</span></div>
+              <div class="item-menu-desc">Aros de cebolla y tocineta</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Bacana del Barrio</div>
+              <div class="item-menu-desc">Pollo desmechado en tártara y tocineta</div>
+            </div>
+            <div class="item-menu-precio">$29K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Santa Fé con Pollo</div>
+              <div class="item-menu-desc">Pollo desmechado en tártara y aguacate</div>
+            </div>
+            <div class="item-menu-precio">$29K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Bariloche</div>
+              <div class="item-menu-desc">Chorizo del chef bañado en chimichurri</div>
+            </div>
+            <div class="item-menu-precio">$29K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Champion</div>
+              <div class="item-menu-desc">Champiñones portobello</div>
+            </div>
+            <div class="item-menu-precio">$29K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Doble Carne <span class="tag tag-premium">Premium</span></div>
+              <div class="item-menu-desc">Dos porciones de carne Angus de 180gr.</div>
+            </div>
+            <div class="item-menu-precio">$32K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Mixta</div>
+              <div class="item-menu-desc">180 gr. de carne Angus + filete de pechuga de 150 gr.</div>
+            </div>
+            <div class="item-menu-precio">$34K</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <img src="pizza-artesanal.jpg" alt="Pizza Artesanal BARRIO CAMPESTRE">
+        <h3>🍕 PIZZAS A LA LEÑA</h3>
+        <div class="lista-menu">
+          <div class="item-menu"><div class="item-menu-nombre">BARRIO CAMPESTRE</div><div class="item-menu-precio">$35K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">MR. CUATE</div><div class="item-menu-precio">$35K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">KENTUCKY</div><div class="item-menu-precio">$35K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">BARCELONA</div><div class="item-menu-precio">$35K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">MARGARITA</div><div class="item-menu-precio">$30K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">PRIMAVERA</div><div class="item-menu-precio">$35K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">HAWAIANA</div><div class="item-menu-precio">$35K</div></div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>🥗 ENSALADAS</h3>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ensalada de la Tierra</div>
+              <div class="item-menu-desc">Mix de lechugas, mix de quesos, aguacate, champiñones, tomate cherry, súper vinagreta con vermicelli frito</div>
+            </div>
+            <div class="item-menu-precio">$26K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ensalada Barrio Campestre <span class="tag">De la casa</span></div>
+              <div class="item-menu-desc">Mix de lechugas, mix de quesos, aguacate, pollo salteado en mostaza Dijon, tomate cherry, súper vinagreta con maicitos</div>
+            </div>
+            <div class="item-menu-precio">$26K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ensalada Trópico</div>
+              <div class="item-menu-desc">Mix de lechugas en reducción de vinagre balsámico y mayonesa verde, lomito fino, tocineta, aguacate, julianas de mango, fresa y queso</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Ensalada Costeña</div>
+              <div class="item-menu-desc">Mix de lechugas, camarones, palmitos de cangrejo, julianas de maduro frito, aguacate, queso costeño y vinagreta</div>
+            </div>
+            <div class="item-menu-precio">$27K</div>
+          </div>
+        </div>
+
+        <div class="subcategoria">MENÚ INFANTIL <span class="tag tag-infantil">Kids</span></div>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Nuggets de Pollo</div>
+              <div class="item-menu-desc">Acompañados de papitas y salsas</div>
+            </div>
+            <div class="item-menu-precio">$16K</div>
+          </div>
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Pechuguita de Pollo 200 gr.</div>
+              <div class="item-menu-desc">Acompañados de papitas y salsas</div>
+            </div>
+            <div class="item-menu-precio">$18K</div>
+          </div>
+        </div>
+
+        <div class="subcategoria">EXTRAS</div>
+        <div class="lista-menu">
+          <div class="item-menu"><div class="item-menu-nombre">Arepa Santandereana x2</div><div class="item-menu-precio">$6K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Porción de Papa a la Francesa</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Porción de Papa Criolla</div><div class="item-menu-precio">$5K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Ensalada de la Huerta</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Porción de Yuca al Vapor</div><div class="item-menu-precio">$5K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Chimichurri</div><div class="item-menu-precio">$2K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Guacamole</div><div class="item-menu-precio">$2K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Salsa Tártara</div><div class="item-menu-precio">$2K</div></div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>🥤 FRESQUERÍA - BEBIDAS</h3>
+        <p style="font-size:0.85rem; color:#666; margin:10px 0;">Acompañe el día con un juguito</p>
+        
+        <div class="subcategoria">JUGOS LA FRESCA</div>
+        <div class="lista-menu">
+          <div class="item-menu"><div class="item-menu-nombre">Limonada de Coco</div><div class="item-menu-precio">$9K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Limonada Cerezada</div><div class="item-menu-precio">$9K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Maracumango</div><div class="item-menu-precio">$9K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Limonada Natural</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Mandarina</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Naranjada</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Fresa</div><div class="item-menu-precio">$7K</div></div>
+          <div class="item-menu"><div class="item-menu-nombre">Mora</div><div class="item-menu-precio">$7K</div></div>
+        </div>
+
+        <div class="subcategoria">BEBIDAS FRÍAS</div>
+        <div class="lista-menu">
+          <div class="item-menu">
+            <div>
+              <div class="item-menu-nombre">Gaseosas PET 400</div>
+              <div class="item-menu-desc">Coca Cola tradicional/Zero, Sprite, Quatro, Kola Román, Kola Hipinto tradicional/Cero calorías, Manzana
